@@ -3,6 +3,7 @@ import pyarrow.parquet as pq
 import argparse
 from sqlalchemy import create_engine
 import os
+import time
 
 def main(params):
     user = params.user
@@ -24,13 +25,16 @@ def main(params):
 
     df = pd.read_parquet(f'{file_location}',
                             engine='pyarrow') 
-
+    
+    tic = time.perf_counter()
     df.to_sql(
             name=f'{table_name}',
             con=engine,
             if_exists='replace',
             chunksize=150000
         )
+    toc = time.perf_counter()
+    print(f"Converted the parquet {table_name} in {toc - tic:0.4f} seconds")
 
 if __name__ == '__main__':
 
