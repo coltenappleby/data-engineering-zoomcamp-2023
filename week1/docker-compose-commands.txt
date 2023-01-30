@@ -1,0 +1,34 @@
+# Command for Windows
+# Drafted from above section
+# The windows volume bit is a bit messy, check the timestamp on the video: 5:20
+docker run -it \\
+	-e POSTGRES_USER="root" \\
+	-e POSTGRES_PASSWORD="root" \\
+	-e POSTGRES_DB="ny_taxi" \\
+	-v /home/coltenappleby/dev/data-engineering-zoomcamp/data \\
+	-p 5432:5432
+	postgres:13
+
+# Command for Linux
+# copied from above section
+# Same command but for window
+docker run -it \
+	-e POSTGRES_USER="root" \
+	-e POSTGRES_PASSWORD="root" \
+	-e POSTGRES_DB="ny_taxi" \
+	-v ${pwd}/data \
+	-p 5432:5432 \
+	postgres:13
+
+docker run -it -e POSTGRES_USER="root" -e POSTGRES_PASSWORD="root" -e POSTGRES_DB="ny_taxi" -v ${pwd}/data -p 5432:5432 postgres:13
+
+
+
+python ingest_data.py \
+    --user=root \
+    --password=root \
+    --host=localhost \
+    --port=5432 \
+    --database_name=ny_taxi \
+    --table_name=yellow_taxi_trips \
+    --url=data-parquet/yellow_tripdata_2022-01.parquet
