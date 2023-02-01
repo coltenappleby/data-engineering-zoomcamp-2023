@@ -1,8 +1,8 @@
 # Data Files
 
-.csv.gz
-.csv
-.parquet
+*.csv.gz
+*.csv
+*.parquet
 
 /data-csv
 /data_pgadmin4
