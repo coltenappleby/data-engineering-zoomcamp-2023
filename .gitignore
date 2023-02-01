@@ -3,3 +3,7 @@
 .csv.gz
 .csv
 .parquet
+
+/data-csv
+/data_pgadmin4
+/ny_taxi_postgres_data
