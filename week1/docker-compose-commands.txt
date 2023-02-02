@@ -31,4 +31,16 @@ python ingest_data.py \
     --port=5432 \
     --database_name=ny_taxi \
     --table_name=yellow_taxi_trips \
-    --url=data-parquet/yellow_tripdata_2022-01.parquet
+    --file_location=data-parquet/yellow_tripdata_2022-01.parquet
+
+
+docker build -t taxi_ingest:v001 .
+
+docker run taxi_ingest:v001 \    
+	--user=root \
+    --password=root \
+    --host=localhost \
+    --port=5432 \
+    --database_name=ny_taxi \
+    --table_name=yellow_taxi_trips \
+    --file_location=data-parquet/yellow_tripdata_2022-01.parquet
