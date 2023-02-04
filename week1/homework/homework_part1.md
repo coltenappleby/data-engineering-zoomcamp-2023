@@ -9,5 +9,8 @@
 # Question 5
 
 # Question 6
+Long Island City/Queens Plaza
 
-# Question 7
+PULocationID
+DOLocationID
+LocationID
