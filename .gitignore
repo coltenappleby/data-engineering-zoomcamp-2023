@@ -4,6 +4,6 @@
 *.csv
 *.parquet
 
-/data-csv
-/data_pgadmin4
-/ny_taxi_postgres_data
+week1/data-csv
+week1/data_pgadmin4
+week1/ny_taxi_postgres_data
