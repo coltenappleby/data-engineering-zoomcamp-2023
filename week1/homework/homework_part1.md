@@ -10,7 +10,3 @@
 
 # Question 6
 Long Island City/Queens Plaza
-
-PULocationID
-DOLocationID
-LocationID
