@@ -3,8 +3,11 @@
 *.csv.gz
 *.csv
 *.parquet
+*.Identifier
+
+pgadmin.db
 
 week1/data-csv
-week1/data_pgadmin4
+week1/data_pgadmin4/
 week1/ny_taxi_postgres_data
 dtc-de-auth-key.json
